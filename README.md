@@ -6,3 +6,4 @@ Finalised ssh configuration
 Adding ansible jenkins job
 
 Still unable to complete configuration
+Configuring git with jenkins server
