@@ -5,8 +5,8 @@
 # - hosts: all
 # - import_playbook: ../static-assignments/common-del.yml
 
-- hosts: uat-webservers
-- import_playbook: ../static-assignments/uat-webservers.yml
+# - hosts: webservers
+# - import_playbook: ../static-assignments/uat-webservers.yml
 
 
 - hosts: all
@@ -19,4 +19,25 @@
 
 - hosts: webservers
 - name: Webserver assignment
-  import_playbook: ../static-assignments/webservers.yml
+  import_playbook: ../static-assignments/uat-webservers.yml
+
+- name: import common file
+- include_playbook: ../static-assignments/common.yml
+  tags:
+    - always
+
+- name: include env-vars file
+- import_playbook: ../dynamic-assignments/env-vars.yml
+  tags:
+    - always    
+
+- name: import datase file
+  import_playbook: ../static-assignments/database.yml   
+
+- name: import webservers file
+  import_playbook: ../static-assignments/uat-webservers.yml
+
+- name: import Loadbalancers assignment
+  import_playbook: ../static-assignments/loadbalancers.yml
+  when: load_balancer_is_required    
+

@@ -62,6 +62,10 @@ apache_restart_state: restarted
 apache_packages_state: present
 
 
+ enable_apache_lb: false
+ load_balancer_is_required: false 
+
+
 # webservers
 loadbalancer_name: "myapp1"
 web1: "172.31.46.103 weight=3"
