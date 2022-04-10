@@ -1,6 +1,6 @@
 ---
-- hosts: localhost
-- name: Include dynamic variables
+- host: all
+- name: Include dynamic 
 # tasks:
   import_playbook: ../static-assignments/common.yml
   import_playbook: ../dynamic-assignments/env-vars.yml
@@ -20,9 +20,6 @@
 - name: import Loadbalancers assignment
   import_playbook: ../static-assignments/lb.yml
   when: load_balancer_is_required 
-
-
-
 
 
 
