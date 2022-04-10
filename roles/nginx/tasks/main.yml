@@ -6,8 +6,9 @@
 
 - name: Define nginx_user.
   set_fact:
-    nginx_user: "{{ __nginx_user }}"
+    nginx_user: "nginx"
   when: nginx_user is not defined
+  # {{ __nginx_user }}
 
 # Setup/install tasks.
 - include_tasks: setup-RedHat.yml
