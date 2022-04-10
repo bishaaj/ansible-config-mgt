@@ -42,10 +42,10 @@ nginx_server_names_hash_bucket_size: "64"
 nginx_proxy_cache_path: ""
 
 nginx_extra_conf_options: ""
-# Example extra main options, used within the main nginx's context:
-#   nginx_extra_conf_options: |
-#     env VARIABLE;
-#     include /etc/nginx/main.d/*.conf;
+Example extra main options, used within the main nginx's context:
+  nginx_extra_conf_options: |
+    env VARIABLE;
+    include /etc/nginx/main.d/*.conf;
 
 nginx_extra_http_options:
 Example extra http options, printed inside the main server http config:
@@ -85,8 +85,7 @@ nginx_upstreams:
   # servers:
   #   - "172.31.46.103 weight=3"
   #   - "172.31.38.23 weight=3"
-#    - "srv3.example.com"
-
+  #   - "srv3.example.com"
 
   servers: {
     "web1 weight=3",
@@ -100,5 +99,5 @@ nginx_log_format: |-
   '"$http_user_agent" "$http_x_forwarded_for"'
 
 
- enable_nginx_lb: true
- load_balancer_is_required: true
+ enable_nginx_lb: false
+ load_balancer_is_required: false
