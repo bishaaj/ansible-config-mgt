@@ -68,8 +68,8 @@ load_balancer_is_required: false
 
 # webservers
 loadbalancer_name: "myapp1"
-web1: 172.31.46.103 weight=3
-web2: 172.31.38.23" weight=3
+web1: 172.31.43.151 weight=3
+web2: 172.31.37.90" weight=3
 
 # 172.31.31.44
 # 172.31.30.168
