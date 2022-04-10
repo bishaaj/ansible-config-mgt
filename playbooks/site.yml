@@ -18,7 +18,7 @@
 
 - name: import Loadbalancers assignment
   import_playbook: ../static-assignments/lb.yml
-  when: load_balancer_is_required  
+  when: load_balancer_is_required cd an a  
 
 # - hosts: all
 # - import_playbook: ../static-assignments/common.yml
