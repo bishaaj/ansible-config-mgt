@@ -1,5 +1,4 @@
 ---
-- host: all
 - name: Include dynamic 
 # tasks:
   import_playbook: ../static-assignments/common.yml
