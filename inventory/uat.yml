@@ -12,15 +12,15 @@
 172.31.34.92 ansible_ssh_user='ubuntu'
 
 
-[deployment:children]
-db
-lb
+# [deployment:children]
+# db
+# lb
 
-[deployment:vars]
-ansible_user=ec2-user
-ansible_user=ubuntu
-ansible-python_interpreter=/usr/libexec/platform-python
-ansible_ssh_private_key_file=~/.ssh/id_rsa
+# [deployment:vars]
+# ansible_user=ec2-user
+# ansible_user=ubuntu
+# ansible-python_interpreter=/usr/libexec/platform-python
+# ansible_ssh_private_key_file=~/.ssh/id_rsa
 
 
 
